@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     DatePicker date;
     Button submit;
     Button reset;
+    TextView details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         date = findViewById(R.id.datePicker);
         submit = findViewById(R.id.Submit);
         reset = findViewById(R.id.Reset);
+        details = findViewById(R.id.details);
 
         time.setCurrentHour(19);
         time.setCurrentMinute(30);
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         name.setText("");
         phone.setText("");
         pax.setText("");
+        details.setText("");
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     String output=String.format("Registration made for %s pax on %s at %s by %s for %s", xpax, xdate, xtime, xname, xsmoke);
-                    Toast.makeText(MainActivity.this, output, Toast.LENGTH_LONG).show();
+                    details.setText(output);
+                    Toast.makeText(MainActivity.this, "Reservation made!", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -114,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 name.setText("");
                 phone.setText("");
                 pax.setText("");
+                details.setText("");
 
             }
         });
