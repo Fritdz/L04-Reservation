@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">L04-Reservation</string>
+    <string name="name">Name:</string>
 </resources>

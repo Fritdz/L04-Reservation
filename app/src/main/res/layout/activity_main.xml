@@ -7,50 +7,123 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    //Name 
-    <LinearLayout
+    //Name
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:padding="15dp">
 
-        <TextView
-            android:id="@+id/Name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/editName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/Phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter name here"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/editPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone" />
+            <TextView
+                android:id="@+id/Phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/Pax"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <EditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter phone number here"
+                android:inputType="phone" />
 
-        <EditText
-            android:id="@+id/editPax"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/Pax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No. of Pax"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editPax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter no of pax here"
+                android:inputType="number" />
+
+            <ToggleButton
+                android:id="@+id/smoke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                android:textOff="Non-smoking"
+                android:textOn="Smoking" />
+
+            <TextView
+                android:id="@+id/Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"/>
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp">
+
+                <Button
+                    android:id="@+id/Reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reset" />
+
+                <Button
+                    android:id="@+id/Submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 </LinearLayout>
